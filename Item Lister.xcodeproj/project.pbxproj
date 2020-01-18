@@ -29,6 +29,8 @@
 		86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */; };
 		86E1C7DD23D37D6600E771B6 /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7DC23D37D6600E771B6 /* UIColor+Styling.swift */; };
 		86E1C7E023D37F6B00E771B6 /* UIButton+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7DF23D37F6B00E771B6 /* UIButton+Styling.swift */; };
+		86E1C7E323D3807700E771B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7E223D3807700E771B6 /* NetworkManager.swift */; };
+		86E1C7EE23D3933A00E771B6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7ED23D3933A00E771B6 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Styling.swift"; sourceTree = "<group>"; };
 		86E1C7DC23D37D6600E771B6 /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 		86E1C7DF23D37F6B00E771B6 /* UIButton+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styling.swift"; sourceTree = "<group>"; };
+		86E1C7E223D3807700E771B6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		86E1C7ED23D3933A00E771B6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			children = (
 				86E1C7CD23D3790100E771B6 /* Base */,
 				86E1C7D423D37B9100E771B6 /* Extensions */,
+				86E1C7E123D3806200E771B6 /* Network */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -294,6 +299,23 @@
 				86E1C7DF23D37F6B00E771B6 /* UIButton+Styling.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		86E1C7E123D3806200E771B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7E223D3807700E771B6 /* NetworkManager.swift */,
+				86E1C7EC23D3932800E771B6 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		86E1C7EC23D3932800E771B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7ED23D3933A00E771B6 /* Item.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,7 +501,9 @@
 				86E1C7D123D3793300E771B6 /* StatefulViewModel.swift in Sources */,
 				86E1C7E023D37F6B00E771B6 /* UIButton+Styling.swift in Sources */,
 				86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */,
+				86E1C7EE23D3933A00E771B6 /* Item.swift in Sources */,
 				86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */,
+				86E1C7E323D3807700E771B6 /* NetworkManager.swift in Sources */,
 				86E1C7D723D37BBD00E771B6 /* String+Localization.swift in Sources */,
 				86E1C7DD23D37D6600E771B6 /* UIColor+Styling.swift in Sources */,
 				86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */,
