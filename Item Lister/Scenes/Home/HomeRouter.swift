@@ -23,8 +23,14 @@ final class DefaultHomeRouter: HomeRouter {
     func route(to destination: HomeRoute, from context: HomeViewController) {
         switch destination {
         case .itemDetail:
-            // TODO: To be implemented.
-            break
+            guard let viewModel = context.viewModel.createItemDetailViewModel() else {
+                return
+            }
+
+            let viewController = ItemDetailViewController.instantiate()
+            viewController.viewModel = viewModel
+
+            context.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }

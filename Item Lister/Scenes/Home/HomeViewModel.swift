@@ -51,3 +51,16 @@ extension HomeViewModel {
         }
     }
 }
+
+// MARK: - View Model Creation
+
+extension HomeViewModel {
+
+    func createItemDetailViewModel() -> ItemDetailViewModel? {
+        guard let index = selectedItemIndex else {
+            return nil
+        }
+
+        return ItemDetailViewModel(item: itemList[index])
+    }
+}

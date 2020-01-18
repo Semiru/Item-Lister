@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+final class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var headerTitleLabel: UILabel!
