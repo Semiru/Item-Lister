@@ -26,6 +26,7 @@
 		86E1C7D123D3793300E771B6 /* StatefulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D023D3793300E771B6 /* StatefulViewModel.swift */; };
 		86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D223D3793F00E771B6 /* BaseViewController.swift */; };
 		86E1C7D723D37BBD00E771B6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D623D37BBD00E771B6 /* String+Localization.swift */; };
+		86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		86E1C7D023D3793300E771B6 /* StatefulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewModel.swift; sourceTree = "<group>"; };
 		86E1C7D223D3793F00E771B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86E1C7D623D37BBD00E771B6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Styling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				86E1C7D523D37BA200E771B6 /* String */,
+				86E1C7D823D37CD400E771B6 /* UIFont */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +264,14 @@
 				86E1C7D623D37BBD00E771B6 /* String+Localization.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		86E1C7D823D37CD400E771B6 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +458,7 @@
 				86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */,
 				86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */,
 				86E1C7D723D37BBD00E771B6 /* String+Localization.swift in Sources */,
+				86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
