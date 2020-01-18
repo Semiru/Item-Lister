@@ -13,6 +13,10 @@
 		86E1C78923D3692F00E771B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C78723D3692F00E771B6 /* LaunchScreen.storyboard */; };
 		86E1C79423D3692F00E771B6 /* Item_ListerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C79323D3692F00E771B6 /* Item_ListerTests.swift */; };
 		86E1C79F23D3692F00E771B6 /* Item_ListerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C79E23D3692F00E771B6 /* Item_ListerUITests.swift */; };
+		86E1C7B523D3729200E771B6 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E1C7B323D3729200E771B6 /* Lottie.framework */; };
+		86E1C7B623D3729200E771B6 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86E1C7B323D3729200E771B6 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86E1C7B723D3729200E771B6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E1C7B423D3729200E771B6 /* Alamofire.framework */; };
+		86E1C7B823D3729200E771B6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86E1C7B423D3729200E771B6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		86E1C7B923D3729200E771B6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				86E1C7B623D3729200E771B6 /* Lottie.framework in Embed Frameworks */,
+				86E1C7B823D3729200E771B6 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		86E1C77923D3692A00E771B6 /* Item Lister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Lister.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E1C77C23D3692A00E771B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +64,8 @@
 		86E1C79A23D3692F00E771B6 /* Item ListerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Item ListerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E1C79E23D3692F00E771B6 /* Item_ListerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item_ListerUITests.swift; sourceTree = "<group>"; };
 		86E1C7A023D3692F00E771B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E1C7B323D3729200E771B6 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		86E1C7B423D3729200E771B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E1C7B523D3729200E771B6 /* Lottie.framework in Frameworks */,
+				86E1C7B723D3729200E771B6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +102,7 @@
 				86E1C79223D3692F00E771B6 /* Item ListerTests */,
 				86E1C79D23D3692F00E771B6 /* Item ListerUITests */,
 				86E1C77A23D3692A00E771B6 /* Products */,
+				86E1C7B223D3729200E771B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +170,15 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		86E1C7B223D3729200E771B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7B423D3729200E771B6 /* Alamofire.framework */,
+				86E1C7B323D3729200E771B6 /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +189,7 @@
 				86E1C77523D3692A00E771B6 /* Sources */,
 				86E1C77623D3692A00E771B6 /* Frameworks */,
 				86E1C77723D3692A00E771B6 /* Resources */,
+				86E1C7B923D3729200E771B6 /* Embed Frameworks */,
 				86E1C7B023D36CBA00E771B6 /* ShellScript */,
 				86E1C7B123D36CE000E771B6 /* ShellScript */,
 			);
@@ -283,6 +317,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -490,6 +526,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Item Lister/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,6 +547,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Item Lister/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
