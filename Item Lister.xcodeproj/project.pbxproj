@@ -21,6 +21,7 @@
 		86E1C7C023D3742500E771B6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C7BC23D3742400E771B6 /* OpenSans-Semibold.ttf */; };
 		86E1C7C123D3742500E771B6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C7BD23D3742400E771B6 /* OpenSans-Bold.ttf */; };
 		86E1C7C223D3742500E771B6 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C7BE23D3742500E771B6 /* OpenSans-Light.ttf */; };
+		86E1C7C623D3756D00E771B6 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C7C523D3756C00E771B6 /* loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		86E1C7BC23D3742400E771B6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		86E1C7BD23D3742400E771B6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		86E1C7BE23D3742500E771B6 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		86E1C7C523D3756C00E771B6 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				86E1C78723D3692F00E771B6 /* LaunchScreen.storyboard */,
 				86E1C78523D3692F00E771B6 /* Assets.xcassets */,
+				86E1C7C423D3753300E771B6 /* Animations */,
 				86E1C7BA23D373EB00E771B6 /* Fonts */,
 			);
 			path = Resources;
@@ -197,6 +200,14 @@
 				86E1C7BB23D3742400E771B6 /* OpenSans.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		86E1C7C423D3753300E771B6 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7C523D3756C00E771B6 /* loading.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 			files = (
 				86E1C78923D3692F00E771B6 /* LaunchScreen.storyboard in Resources */,
 				86E1C78623D3692F00E771B6 /* Assets.xcassets in Resources */,
+				86E1C7C623D3756D00E771B6 /* loading.json in Resources */,
 				86E1C7C223D3742500E771B6 /* OpenSans-Light.ttf in Resources */,
 				86E1C7C123D3742500E771B6 /* OpenSans-Bold.ttf in Resources */,
 				86E1C78423D3692A00E771B6 /* Main.storyboard in Resources */,
