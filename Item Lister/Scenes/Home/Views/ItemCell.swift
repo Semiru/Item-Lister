@@ -8,11 +8,6 @@
 
 import UIKit
 
-private enum Constants {
-
-     static let currencyCode = "TL"
-}
-
 struct ItemCellPresentation {
 
     let category: String
@@ -79,6 +74,6 @@ extension ItemCell {
     func configure(with presentation: ItemCellPresentation) {
         categoryLabel.text = presentation.category
         nameLabel.text = presentation.name
-        priceLabel.text = "\(presentation.price) \(Constants.currencyCode)"
+        priceLabel.text = "\(presentation.price) \(Global.Constants.currencyCode)"
     }
 }

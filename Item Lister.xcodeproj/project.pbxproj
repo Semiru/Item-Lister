@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8644D5F623D3C71200EB303A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644D5F523D3C71200EB303A /* Global.swift */; };
 		86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C77C23D3692A00E771B6 /* AppDelegate.swift */; };
 		86E1C78423D3692A00E771B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C78223D3692A00E771B6 /* Main.storyboard */; };
 		86E1C78623D3692F00E771B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C78523D3692F00E771B6 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8644D5F523D3C71200EB303A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		86E1C77923D3692A00E771B6 /* Item Lister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Lister.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E1C77C23D3692A00E771B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E1C78323D3692A00E771B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8644D5F723D3C73E00EB303A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				8644D5F523D3C71200EB303A /* Global.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		86E1C77023D3692A00E771B6 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +204,7 @@
 			children = (
 				86E1C7CD23D3790100E771B6 /* Base */,
 				86E1C7D423D37B9100E771B6 /* Extensions */,
+				8644D5F723D3C73E00EB303A /* Global */,
 				86E1C7E123D3806200E771B6 /* Network */,
 				86E1C7FB23D3B8C300E771B6 /* Protocols */,
 			);
@@ -551,6 +562,7 @@
 				86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */,
 				86E1C7E823D3926200E771B6 /* HomeViewModel.swift in Sources */,
 				86E1C7EE23D3933A00E771B6 /* Item.swift in Sources */,
+				8644D5F623D3C71200EB303A /* Global.swift in Sources */,
 				86E1C7FF23D3B8F800E771B6 /* Instantiatable.swift in Sources */,
 				86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */,
 				86E1C7E323D3807700E771B6 /* NetworkManager.swift in Sources */,
