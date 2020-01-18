@@ -16,6 +16,7 @@
 
 // MARK: - Home Scene
 
+"home_header_label" = "ITEM LISTER";
 "home_retry_button_label" = "RETRY";
 
 // MARK: - Details Scene

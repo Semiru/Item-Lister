@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var headerTitleLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
@@ -31,6 +30,12 @@ class HomeViewController: BaseViewController {
 
         viewModel.fetchItemList()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.navigationBar.isHidden = true
+    }
 }
 
 // MARK: - Styling
@@ -38,7 +43,11 @@ class HomeViewController: BaseViewController {
 private extension HomeViewController {
 
     func applyStyling() {
-        navigationController?.navigationBar.isHidden = true
+        headerView.backgroundColor = .grayColor
+
+        headerTitleLabel.textColor = .blackColor
+        headerTitleLabel.font = UIFont.font(withFontType: .semibold, size: 32.0)
+        headerTitleLabel.text = "home_header_label".localized
 
         retryButton.applyStyle(for: .redWhite(isRoundedCorner: true))
         retryButton.setTitle("home_retry_button_label".localized, for: .normal)
