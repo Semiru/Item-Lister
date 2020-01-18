@@ -27,6 +27,7 @@
 		86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D223D3793F00E771B6 /* BaseViewController.swift */; };
 		86E1C7D723D37BBD00E771B6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D623D37BBD00E771B6 /* String+Localization.swift */; };
 		86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */; };
+		86E1C7DD23D37D6600E771B6 /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7DC23D37D6600E771B6 /* UIColor+Styling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		86E1C7D223D3793F00E771B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86E1C7D623D37BBD00E771B6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Styling.swift"; sourceTree = "<group>"; };
+		86E1C7DC23D37D6600E771B6 /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				86E1C7D523D37BA200E771B6 /* String */,
+				86E1C7DB23D37D5100E771B6 /* UIColor */,
 				86E1C7D823D37CD400E771B6 /* UIFont */,
 			);
 			path = Extensions;
@@ -272,6 +275,14 @@
 				86E1C7D923D37CEC00E771B6 /* UIFont+Styling.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		86E1C7DB23D37D5100E771B6 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7DC23D37D6600E771B6 /* UIColor+Styling.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +469,7 @@
 				86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */,
 				86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */,
 				86E1C7D723D37BBD00E771B6 /* String+Localization.swift in Sources */,
+				86E1C7DD23D37D6600E771B6 /* UIColor+Styling.swift in Sources */,
 				86E1C7DA23D37CEC00E771B6 /* UIFont+Styling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
