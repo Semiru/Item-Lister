@@ -36,6 +36,8 @@
 		86E1C7EE23D3933A00E771B6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7ED23D3933A00E771B6 /* Item.swift */; };
 		86E1C7F323D39A4000E771B6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7F223D39A4000E771B6 /* ItemCell.swift */; };
 		86E1C7F523D39A4A00E771B6 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C7F423D39A4A00E771B6 /* ItemCell.xib */; };
+		86E1C7FD23D3B8E600E771B6 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7FC23D3B8E600E771B6 /* StoryboardLoadable.swift */; };
+		86E1C7FF23D3B8F800E771B6 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C7FE23D3B8F800E771B6 /* Instantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		86E1C7ED23D3933A00E771B6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		86E1C7F223D39A4000E771B6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		86E1C7F423D39A4A00E771B6 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		86E1C7FC23D3B8E600E771B6 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		86E1C7FE23D3B8F800E771B6 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				86E1C7CD23D3790100E771B6 /* Base */,
 				86E1C7D423D37B9100E771B6 /* Extensions */,
 				86E1C7E123D3806200E771B6 /* Network */,
+				86E1C7FB23D3B8C300E771B6 /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -347,6 +352,15 @@
 				86E1C7ED23D3933A00E771B6 /* Item.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		86E1C7FB23D3B8C300E771B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86E1C7FE23D3B8F800E771B6 /* Instantiatable.swift */,
+				86E1C7FC23D3B8E600E771B6 /* StoryboardLoadable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,12 +544,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E1C7FD23D3B8E600E771B6 /* StoryboardLoadable.swift in Sources */,
 				86E1C7F323D39A4000E771B6 /* ItemCell.swift in Sources */,
 				86E1C7D123D3793300E771B6 /* StatefulViewModel.swift in Sources */,
 				86E1C7E023D37F6B00E771B6 /* UIButton+Styling.swift in Sources */,
 				86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */,
 				86E1C7E823D3926200E771B6 /* HomeViewModel.swift in Sources */,
 				86E1C7EE23D3933A00E771B6 /* Item.swift in Sources */,
+				86E1C7FF23D3B8F800E771B6 /* Instantiatable.swift in Sources */,
 				86E1C7D323D3793F00E771B6 /* BaseViewController.swift in Sources */,
 				86E1C7E323D3807700E771B6 /* NetworkManager.swift in Sources */,
 				86E1C7E623D3818A00E771B6 /* HomeViewController.swift in Sources */,
