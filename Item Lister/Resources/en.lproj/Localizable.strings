@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Item Lister
+
+  Created by Cemil Kocaman on 18.01.2020.
+  Copyright © 2020 Cemil Kocaman Software. All rights reserved.
+*/
+
+// MARK: - General
+
+"general_buy_button_label" = "BUY NOW";
+"general_add_to_cart_button_label" = "ADD TO CART";
+"general_network_error_message" = "NETWORK ERROR!";
+"general_network_error_title" = "ERROR";
+"general_alert_done_button_label" = "DONE";
+
+// MARK: - Home Scene
+
+"home_retry_button_label" = "RETRY";
+
+// MARK: - Details Scene
+
+"details_title" = "ITEM DETAIL";
