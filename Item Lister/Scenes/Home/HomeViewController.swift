@@ -53,7 +53,12 @@ private extension HomeViewController {
 private extension HomeViewController {
 
     func configureViews() {
-        // TODO: Will be implemented.
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        let cellIdentifier = String(describing: ItemCell.self)
+        let nib = UINib(nibName: cellIdentifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
 }
 
@@ -75,8 +80,18 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO: Will be implemented.
-        return UITableViewCell()
+        let identifier = String(describing: ItemCell.self)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ItemCell else {
+            return UITableViewCell()
+        }
+
+        let item = viewModel.itemList[indexPath.row]
+        let itemCellPresentation = ItemCellPresentation(category: item.category,
+                                                        name: item.name,
+                                                        price: item.price)
+        cell.configure(with: itemCellPresentation)
+
+        return cell
     }
 }
 
