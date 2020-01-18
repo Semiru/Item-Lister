@@ -20,6 +20,11 @@ struct ItemCellPresentation {
     let price: String
 }
 
+protocol ItemCellDelegate: class {
+
+    func itemCellDidTapBuyButton(_ cell: ItemCell)
+}
+
 final class ItemCell: UITableViewCell {
 
     @IBOutlet private weak var iconImageView: UIImageView!
@@ -27,6 +32,8 @@ final class ItemCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var buyButton: UIButton!
+
+    weak var delegate: ItemCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,7 +68,7 @@ private extension ItemCell {
 private extension ItemCell {
 
     @IBAction func buyButtonTapped(_ sender: Any) {
-        // TODO: Will be implemented.
+        delegate?.itemCellDidTapBuyButton(self)
     }
 }
 

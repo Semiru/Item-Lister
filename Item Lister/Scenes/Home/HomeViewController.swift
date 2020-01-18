@@ -90,6 +90,7 @@ extension HomeViewController: UITableViewDataSource {
                                                         name: item.name,
                                                         price: item.price)
         cell.configure(with: itemCellPresentation)
+        cell.delegate = self
 
         return cell
     }
@@ -100,6 +101,20 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectedItemIndex = indexPath.row
+        router.route(to: .itemDetail, from: self)
+    }
+}
+
+// MARK: - ItemCellDelegate
+
+extension HomeViewController: ItemCellDelegate {
+
+    func itemCellDidTapBuyButton(_ cell: ItemCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+
         viewModel.selectedItemIndex = indexPath.row
         router.route(to: .itemDetail, from: self)
     }
