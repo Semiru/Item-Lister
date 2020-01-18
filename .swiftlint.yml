@@ -1,0 +1,21 @@
+disabled_rules:
+- line_length
+- nesting
+- variable_name
+- type_name
+- function_body_length
+- function_parameter_count
+excluded:
+- Carthage
+opt_in_rules:
+- empty_count
+- sorted_imports
+file_length:
+  warning: 600
+  error: 1000
+type_body_length:
+  warning: 400
+  error: 600
+cyclomatic_complexity:
+  warning: 20
+  error: 30
