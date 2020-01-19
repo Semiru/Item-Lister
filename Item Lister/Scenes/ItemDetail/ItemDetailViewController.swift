@@ -43,7 +43,9 @@ private extension ItemDetailViewController {
     func applyStyling() {
         title = "details_title".localized
 
-        itemImageView.backgroundColor = .grayColor
+        if let imageData = viewModel.imageData {
+            itemImageView.image = UIImage(data: imageData)
+        }
 
         let item = viewModel.item
 

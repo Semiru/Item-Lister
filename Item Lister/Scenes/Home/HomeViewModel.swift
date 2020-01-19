@@ -78,6 +78,8 @@ extension HomeViewModel {
             return nil
         }
 
-        return ItemDetailViewModel(item: itemList[index])
+        let item = itemList[index]
+
+        return ItemDetailViewModel(item: item, imageData: imageDataList[item.id])
     }
 }
