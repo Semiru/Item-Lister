@@ -24,6 +24,7 @@ final class HomeViewModel: StatefulViewModel<HomeStateChange> {
     // MARK: - Properties
 
     var selectedItemIndex: Int?
+    private(set) var imageDataList: [String: Data] = [:]
     private(set) var itemList: [Item] = []
 }
 
@@ -47,7 +48,21 @@ extension HomeViewModel {
             }
 
             strongSelf.itemList = itemList
+            strongSelf.fetchImages()
             strongSelf.emit(change: .fetchItemListSuccess)
+        }
+    }
+
+    private func fetchImages() {
+        itemList.forEach {
+            NetworkManager.shared.fetchImage(with: $0.image,
+                                             id: $0.id) { [weak self] (id, imageData) in
+                                                guard let strongSelf = self else {
+                                                    return
+                                                }
+
+                                                strongSelf.imageDataList[id] = imageData
+            }
         }
     }
 }
