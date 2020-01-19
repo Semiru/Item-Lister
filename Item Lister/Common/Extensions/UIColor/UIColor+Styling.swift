@@ -17,7 +17,7 @@ extension UIColor {
     }
 
     static var grayColor: UIColor {
-        return color(withRed: 171.0, green: 176.0, blue: 182.0)
+        return color(withRed: 190.0, green: 200.0, blue: 208.0)
     }
 
     static var whiteColor: UIColor {
