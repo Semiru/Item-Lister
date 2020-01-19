@@ -49,7 +49,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83359789755182201" green="0.87824650364771406" blue="0.91372113566238677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="cXa-cQ-Aer"/>
                                     <constraint firstItem="6No-yf-05W" firstAttribute="leading" secondItem="MoG-f8-ZTk" secondAttribute="trailing" constant="20" id="efI-8k-7n9"/>
@@ -132,7 +132,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="364" placeholderIntrinsicHeight="594" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YNR-lQ-L4l">
                                                 <rect key="frame" x="24" y="24" width="364" height="594"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4BS-R2-ATK">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconBrand" translatesAutoresizingMaskIntoConstraints="NO" id="4BS-R2-ATK">
                                                         <rect key="frame" x="0.0" y="0.0" width="364" height="182"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="4BS-R2-ATK" secondAttribute="height" multiplier="4:2" id="LjW-KB-U0a"/>
@@ -214,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconBrand" width="64" height="64"/>
         <image name="iconShoppingBag" width="64" height="64"/>
     </resources>
 </document>
