@@ -15,6 +15,7 @@ enum HomeStateChange: StateChange {
     case loadingStateChanged(isLoading: Bool)
     case fetchItemListSuccess
     case fetchItemListFailure
+    case imageDataListUpdated
 }
 
 // MARK: - HomeViewModel
@@ -62,6 +63,7 @@ extension HomeViewModel {
                                                 }
 
                                                 strongSelf.imageDataList[id] = imageData
+                                                strongSelf.emit(change: .imageDataListUpdated)
             }
         }
     }

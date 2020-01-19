@@ -8,6 +8,11 @@
 
 import UIKit
 
+private enum Constants {
+
+    static let animationDuration: TimeInterval = 0.4
+}
+
 final class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var headerView: UIView!
@@ -154,6 +159,26 @@ private extension HomeViewController {
             emptyStateHolderView.isHidden = false
             showAlert(withTitle: "general_network_error_title".localized,
                       message: "general_network_error_message".localized)
+        case .imageDataListUpdated:
+            guard let indexPaths = tableView.indexPathsForVisibleRows else {
+                return
+            }
+
+            for indexPath in indexPaths {
+                if let cell = tableView.cellForRow(at: indexPath) as? ItemCell,
+                    let firstItemId = viewModel.itemList.first?.id,
+                    let firstItemIndex = Int(firstItemId),
+                    let imageData = viewModel.imageDataList["\(indexPath.row + firstItemIndex)"] {
+
+                    UIView.transition(with: cell,
+                                      duration: Constants.animationDuration,
+                                      options: .transitionCrossDissolve,
+                                      animations: {
+                                        cell.configure(with: imageData)
+                    },
+                                      completion: nil)
+                }
+            }
         }
     }
 }
