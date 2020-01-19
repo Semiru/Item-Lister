@@ -10,34 +10,89 @@ import XCTest
 
 class Item_ListerUITests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var app: XCUIApplication!
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    override func setUp() {
+        super.setUp()
+
         continueAfterFailure = false
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+    func testFirstItemDetailValidity() {
+        // Wait to see Home VC
+        let headerViewAccessibilityIdentifier =
+            Global.AccessibilityIdentifiers.HomeViewController.headerView
+        waitToSee(object: app.otherElements[headerViewAccessibilityIdentifier])
+
+        // Tap first cell
+        let table = app.tables.element(boundBy: 0)
+        let firstCell = table.cells.element(boundBy: 0)
+        firstCell.tap()
+
+        // Wait to see Item Detail VC
+        let navigationBarAccessibilityIdentifier =
+            Global.AccessibilityIdentifiers.ItemDetailViewController.navigationBar
+        waitToSee(object: app.navigationBars[navigationBarAccessibilityIdentifier])
+
+        // Validate scene elements
+        let scrollView = app.scrollViews.element(boundBy: 0)
+        let itemDetailStaticTexts = scrollView.otherElements.staticTexts
+        let itemDetailButtons = scrollView.otherElements.buttons
+
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 0).label,
+                       "Jewelery")
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 1).label,
+                       "Unbranded Metal Pants")
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 2).label,
+                       "591.00 TL")
+        XCTAssertEqual(itemDetailButtons.count, 2)
+    }
+
+    func testLastItemDetailValidity() {
+        // Wait to see Home VC
+        let headerViewAccessibilityIdentifier =
+            Global.AccessibilityIdentifiers.HomeViewController.headerView
+        waitToSee(object: app.otherElements[headerViewAccessibilityIdentifier])
+
+        // Tap last cell(after swiping enough to find)
+        let table = app.tables.element(boundBy: 0)
+        let cellCount = table.cells.count
+        let lastCell = table.cells.element(boundBy: cellCount - 1)
+
+        while !lastCell.isHittable {
+            table.swipeUp()
         }
+
+        lastCell.tap()
+
+        // Wait to see Item Detail VC
+        let navigationBarAccessibilityIdentifier =
+            Global.AccessibilityIdentifiers.ItemDetailViewController.navigationBar
+        waitToSee(object: app.navigationBars[navigationBarAccessibilityIdentifier])
+
+        // Validate scene elements
+        let scrollView = app.scrollViews.element(boundBy: 0)
+        let itemDetailStaticTexts = scrollView.otherElements.staticTexts
+        let itemDetailButtons = scrollView.otherElements.buttons
+
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 0).label,
+                       "Grocery")
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 1).label,
+                       "Fantastic Metal Hat")
+        XCTAssertEqual(itemDetailStaticTexts.element(boundBy: 2).label,
+                       "419.00 TL")
+        XCTAssertEqual(itemDetailButtons.count, 2)
+    }
+
+    // MARK: - Helper Methods
+
+    private func waitToSee(object: Any?) {
+        expectation(for: NSPredicate(format: "hittable == true"),
+                    evaluatedWith: object,
+                    handler: nil)
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
 }
