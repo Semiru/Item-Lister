@@ -76,4 +76,8 @@ extension ItemCell {
         nameLabel.text = presentation.name
         priceLabel.text = "\(presentation.price) \(Global.Constants.currencyCode)"
     }
+
+    func configure(with imageData: Data) {
+        iconImageView.image = UIImage(data: imageData)
+    }
 }

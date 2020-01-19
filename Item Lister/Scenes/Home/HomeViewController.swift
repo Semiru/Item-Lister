@@ -101,6 +101,10 @@ extension HomeViewController: UITableViewDataSource {
         cell.configure(with: itemCellPresentation)
         cell.delegate = self
 
+        if let imageData = viewModel.imageDataList[item.id] {
+            cell.configure(with: imageData)
+        }
+
         return cell
     }
 }
