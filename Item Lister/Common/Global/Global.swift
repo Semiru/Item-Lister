@@ -12,4 +12,17 @@ enum Global {
 
         static let currencyCode = "TL"
     }
+
+    enum AccessibilityIdentifiers {
+
+        enum HomeViewController {
+
+            static let headerView = "homeVCHeaderView"
+        }
+
+        enum ItemDetailViewController {
+
+            static let navigationBar = "itemDetailVCNavigationBar"
+        }
+    }
 }

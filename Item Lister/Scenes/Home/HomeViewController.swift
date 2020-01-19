@@ -31,6 +31,7 @@ final class HomeViewController: BaseViewController {
 
         addChangeHandler()
         applyStyling()
+        applyAccessibility()
         configureViews()
 
         viewModel.fetchItemList()
@@ -135,6 +136,15 @@ extension HomeViewController: ItemCellDelegate {
 
         viewModel.selectedItemIndex = indexPath.row
         router.route(to: .itemDetail, from: self)
+    }
+}
+
+// MARK: - Accessibility
+
+private extension HomeViewController {
+
+    func applyAccessibility() {
+        headerView.accessibilityIdentifier = Global.AccessibilityIdentifiers.HomeViewController.headerView
     }
 }
 

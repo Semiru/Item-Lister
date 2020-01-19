@@ -14,6 +14,7 @@
 		8639A30123D3CF76004F7B34 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8639A2FC23D3CF76004F7B34 /* AlamofireImage.framework */; };
 		8639A30223D3CF76004F7B34 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8639A2FC23D3CF76004F7B34 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8644D5F623D3C71200EB303A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644D5F523D3C71200EB303A /* Global.swift */; };
+		86C113DB23D49C9300ABFEFA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644D5F523D3C71200EB303A /* Global.swift */; };
 		86E1C77D23D3692A00E771B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1C77C23D3692A00E771B6 /* AppDelegate.swift */; };
 		86E1C78423D3692A00E771B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C78223D3692A00E771B6 /* Main.storyboard */; };
 		86E1C78623D3692F00E771B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E1C78523D3692F00E771B6 /* Assets.xcassets */; };
@@ -609,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C113DB23D49C9300ABFEFA /* Global.swift in Sources */,
 				86E1C79F23D3692F00E771B6 /* Item_ListerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

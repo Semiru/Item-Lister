@@ -27,6 +27,7 @@ final class ItemDetailViewController: BaseViewController, StoryboardLoadable, In
         super.viewDidLoad()
 
         applyStyling()
+        applyAccessibility()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -79,5 +80,15 @@ private extension ItemDetailViewController {
 
     @IBAction func buyButtonTapped(_ sender: Any) {
         // Left blank intentionally.
+    }
+}
+
+// MARK: - Accessibility
+
+private extension ItemDetailViewController {
+
+    func applyAccessibility() {
+        navigationController?.navigationBar.accessibilityIdentifier =
+            Global.AccessibilityIdentifiers.ItemDetailViewController.navigationBar
     }
 }
