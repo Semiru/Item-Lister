@@ -12,7 +12,8 @@ final class NetworkManager: NSObject {
 
     enum Constants {
 
-        static let baseURL = URL(string: "http://5e209e06e31c6e0014c60962.mockapi.io/api")
+        static let baseURL = URL(string: "http://5e209e06e31c6e0014c60962.mockapi.io/api/")
+        static let itemListURLPath = "products"
     }
 
     static let shared = NetworkManager()
@@ -31,7 +32,7 @@ extension NetworkManager {
             return
         }
 
-        let url = "\(baseURL)/products"
+        let url = "\(baseURL)\(Constants.itemListURLPath)"
         let request = AF.request(url, method: .get, parameters: nil)
 
         request.validate().responseJSON { response in
@@ -44,8 +45,8 @@ extension NetworkManager {
 
                 let decoder = JSONDecoder()
 
-                if let errorResponse = try? decoder.decode([Item].self, from: responseData) {
-                    completion(errorResponse)
+                if let response = try? decoder.decode([Item].self, from: responseData) {
+                    completion(response)
                 } else {
                     completion(nil)
                 }
