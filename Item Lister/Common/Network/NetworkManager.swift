@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import AlamofireImage
 
 final class NetworkManager: NSObject {
 
@@ -24,6 +25,32 @@ final class NetworkManager: NSObject {
 // MARK: - Request Methods
 
 extension NetworkManager {
+
+
+    /// Fetches image from given URL and handles response
+    /// - Parameters:
+    ///   - imageURLString: Image URL string to fetch image
+    ///   - id: Id of the related data
+    ///   - completion: Completion block to call when response is received
+    func fetchImage(with imageURLString: String,
+                    id: String,
+                    completion: @escaping (((id: String, imageData: Data?)) -> Void)) {
+
+        guard let imageURL = URL(string: imageURLString) else {
+            return
+        }
+
+        let imageRequest = AF.request(imageURL, method: .get)
+
+        imageRequest.validate().responseImage { response in
+            switch response.result {
+            case .success:
+                completion((id, response.data))
+            case .failure:
+                completion((id, nil))
+            }
+        }
+    }
 
     /// Fetches item list and handles response
     /// - Parameter completion: Completion block to call when response is received
